@@ -6,7 +6,7 @@ public class GSONBasic {
 	
 	public static void main(String[] args) {
 			
-		Gson gson = new Gson();
+		  Gson gson = new Gson();
 		
 		  Person p = new Person("Prince", 20);
 	      String json = gson.toJson(p);
