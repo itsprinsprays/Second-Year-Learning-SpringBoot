@@ -1,6 +1,6 @@
 package Day41_ManualDependecyInjection;
 
-public class payPal implements NotificationService{
+public class PayPal implements NotificationService{
 	
 	@Override
 	public void sendNotification(String message) {

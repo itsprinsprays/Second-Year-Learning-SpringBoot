@@ -1,6 +1,6 @@
 package Day41_ManualDependecyInjection;
 
-public class gCash implements NotificationService{
+public class GCash implements NotificationService{
 
 	@Override
 	public void sendNotification(String message) {
