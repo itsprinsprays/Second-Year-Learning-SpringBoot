@@ -1,6 +1,6 @@
 package Day42_ManualDependencyInjection;
 
-public class PayPal implements PaymentService{
+public class PayPal implements PaymentService {
 	
 	@Override
 	public void pay(String user, double amount) {

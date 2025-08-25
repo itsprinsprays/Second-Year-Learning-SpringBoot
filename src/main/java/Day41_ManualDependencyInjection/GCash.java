@@ -1,4 +1,4 @@
-package Day41_ManualDependecyInjection;
+package Day41_ManualDependencyInjection;
 
 public class GCash implements NotificationService{
 
