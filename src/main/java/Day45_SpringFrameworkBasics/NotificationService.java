@@ -7,6 +7,13 @@ import org.springframework.stereotype.Component;
 public class NotificationService {
 	
 	private Notifier notifier;
+//	private Notifier smsNotifer
+//	@Autowired
+//	public NotificationService(Notifier notifier, Qualifier("smsNotifier") Notifier smsNotifier {
+//		this.notifier = notifier;
+//		this.smsNotifier = smsNotifier;
+//	}
+	
 	
 	@Autowired
 	public NotificationService(Notifier notifier) {
