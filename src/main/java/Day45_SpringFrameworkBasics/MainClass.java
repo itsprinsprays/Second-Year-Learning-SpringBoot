@@ -17,7 +17,7 @@ public class MainClass {
 		
 		System.out.println(start);
 		
-		notificationService.notificationProcess("@prncbntz@gmail.com", "Prince");
+		notificationService.notificationProcess("@prncbntz@gmail.com", "Prince", "09976050416");
 		
 	}
 

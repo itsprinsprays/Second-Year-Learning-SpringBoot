@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 @Component
-@ComponentScan(basePackages = "Day45_SpringFramework")
+@ComponentScan(basePackages = "Day45_SpringFrameworkBasics")
 public class AppConfig {
 	
 	@Bean

@@ -1,6 +1,6 @@
 package Day45_SpringFrameworkBasics;
 
 public interface Notifier {
-	void send(String message, String recipient);
+	void send(String message, String recipient,String recipient2);
 
 }
