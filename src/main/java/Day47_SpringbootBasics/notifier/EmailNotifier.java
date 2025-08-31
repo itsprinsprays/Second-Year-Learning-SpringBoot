@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class EmailNotifier implements Notifier{
 	@Override
 	public void notify(String message) {
-		System.out.print("Sending jav " + message);
+		System.out.print("Sending Email " + message);
 	}
 
 }
