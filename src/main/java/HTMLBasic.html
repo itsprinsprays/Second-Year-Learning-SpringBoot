@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Test</title>
+</head>
+<body>
+  <h2>Book Manager</h2>
+
+  <!-- Show All -->
+  <button onclick="showBooks()">Show All Books</button>
+  <ul id="bookList"></ul>
+
+  <hr>
+
+  <!-- Delete -->
+  <h3>Delete Book</h3>
+  <input type="number" id="bookId" placeholder="Enter book ID">
+  <button onclick="deleteBook()">Delete</button>
+
+  <script>
+    // 🔹 Show All Books
+    function showBooks() {
+      fetch("http://localhost:8081/book")
+        .then(res => res.json())
+        .then(data => {
+          let list = document.getElementById("bookList");
+          list.innerHTML = ""; // clear before adding
+          data.forEach(book => {
+            let li = document.createElement("li");
+            li.textContent = "ID: " + book.id + " | Title: " + book.title;
+            list.appendChild(li);
+          });
+        })
+        .catch(err => console.error("Error:", err));
+    }
+
+    // 🔹 Delete Book by ID
+    function deleteBook() {
+      const id = document.getElementById("bookId").value;
+      fetch("http://localhost:8081/book/" + id, {
+        method: "DELETE"
+      })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        showBooks(); // refresh list after delete
+      })
+      .catch(err => console.error("Error:", err));
+    }
+  </script>
+</body>
+</html>
